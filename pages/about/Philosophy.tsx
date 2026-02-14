@@ -1,5 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import ImageCarousel from '../../components/ImageCarousel';
+
+import img1 from '../../assets/homepage/Ai.png';
+import img2 from '../../assets/homepage/agriculture.png';
+import img3 from '../../assets/homepage/cyberSecure.png';
+import img4 from '../../assets/homepage/smart.png';
+
+const images = [img1, img2, img3, img4];
 
 const Philosophy = () => {
     const banavatValues = [
@@ -20,85 +28,113 @@ const Philosophy = () => {
     ];
 
     return (
-        <div className="min-h-screen bg-zinc-50 dark:bg-[#09090b] transition-colors pb-32">
-            <header className="bg-white dark:bg-zinc-900/50 pt-32 pb-20 border-b border-gray-100 dark:border-zinc-800 grid-bg mb-16">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="max-w-4xl">
-                        <h1 className="text-5xl md:text-7xl font-black text-zinc-900 dark:text-zinc-100 mb-8 tracking-tighter leading-tight">
-                            Philosophy <span className="text-[#84CC16]">& Values</span>
-                        </h1>
-                        <div className="w-24 h-2 bg-[#84CC16] mb-8" />
-                        <p className="text-xl md:text-2xl text-gray-500 dark:text-zinc-400 font-medium leading-relaxed">
-                            A unified philosophy where ideas are built with purpose and nurtured with care.
-                        </p>
-                    </div>
+        <section className="min-h-screen bg-zinc-50 dark:bg-[#09090b] transition-colors py-24">
+            {/* Header */}
+            <div className="max-w-7xl mx-auto px-6 mb-20">
+                <div className="max-w-4xl">
+                    <h1 className="text-5xl md:text-7xl font-black text-zinc-900 dark:text-zinc-100 mb-6 tracking-tight">
+                        Philosophy <span className="text-[#84CC16]">& Values</span>
+                    </h1>
+                    <p className="text-xl md:text-2xl text-zinc-500 dark:text-zinc-400 leading-relaxed">
+                        A unified philosophy where ideas are built with purpose and nurtured with care.
+                    </p>
                 </div>
-            </header>
-
-            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
-                {/* BANAVAT SECTION */}
-                <section>
-                    <div className="mb-6">
-                        <h3 className="text-xs font-black text-[#84CC16] uppercase tracking-[0.2em] mb-2">Our Foundation</h3>
-                    </div>
-
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="bg-white dark:bg-zinc-900 rounded-3xl border border-zinc-100 dark:border-zinc-800 shadow-xl dark:shadow-none overflow-hidden"
-                    >
-                        {banavatValues.map((v, i) => (
-                            <div
-                                key={i}
-                                className={`group flex flex-row items-start p-6 border-b border-zinc-50 dark:border-zinc-800 last:border-0 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 transition-colors duration-200`}
-                            >
-                                <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-[#84CC16]/10 flex items-center justify-center mr-6 mt-1 group-hover:bg-[#84CC16] transition-colors duration-300">
-                                    <span className="text-2xl font-black text-[#84CC16] group-hover:text-white transition-colors duration-300">{v.letter}</span>
-                                </div>
-                                <div>
-                                    <h4 className="text-lg font-bold text-zinc-900 dark:text-white mb-1">{v.title}</h4>
-                                    <p className="text-sm text-zinc-500 dark:text-zinc-400 font-medium leading-relaxed">
-                                        {v.desc}
-                                    </p>
-                                </div>
-                            </div>
-                        ))}
-                    </motion.div>
-                </section>
-
-                {/* NEST SECTION */}
-                <section>
-                    <div className="mb-6">
-                        <h3 className="text-xs font-black text-[#5D3A1A] dark:text-zinc-400 uppercase tracking-[0.2em] mb-2">Our Ecosystem</h3>
-                    </div>
-
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="bg-[#5D3A1A]/5 dark:bg-zinc-900 rounded-3xl border border-[#5D3A1A]/10 dark:border-zinc-800 shadow-none overflow-hidden"
-                    >
-                        {nestValues.map((v, i) => (
-                            <div
-                                key={i}
-                                className={`group flex flex-row items-start p-6 border-b border-[#5D3A1A]/5 dark:border-zinc-800 last:border-0 hover:bg-[#5D3A1A]/10 dark:hover:bg-zinc-800/50 transition-colors duration-200`}
-                            >
-                                <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-[#5D3A1A] dark:bg-zinc-800 flex items-center justify-center mr-6 mt-1 group-hover:scale-110 transition-transform duration-300">
-                                    <span className="text-2xl font-black text-white dark:text-zinc-200">{v.letter}</span>
-                                </div>
-                                <div>
-                                    <h4 className="text-lg font-bold text-[#5D3A1A] dark:text-white mb-1">{v.title}</h4>
-                                    <p className="text-sm text-[#5D3A1A]/70 dark:text-zinc-400 font-medium leading-relaxed">
-                                        {v.desc}
-                                    </p>
-                                </div>
-                            </div>
-                        ))}
-                    </motion.div>
-                </section>
             </div>
-        </div>
+
+            {/* Main Layout */}
+            <div className="max-w-7xl mx-auto px-6">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+
+                    {/* left — Philosophy Content */}
+                    <div className="space-y-16">
+
+                        {/* BANAVAT */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6 }}
+                            className="bg-white dark:bg-zinc-900 rounded-3xl shadow-xl border border-zinc-200 dark:border-zinc-800 overflow-hidden"
+                        >
+                            <div className="p-8 border-b border-zinc-200 dark:border-zinc-800">
+                                <h3 className="text-sm font-bold uppercase tracking-widest text-[#84CC16]">
+                                    Our Foundation — BANAVAT
+                                </h3>
+                            </div>
+
+                            {banavatValues.map((v, i) => (
+                                <div
+                                    key={i}
+                                    className="group flex items-start p-6 border-b border-zinc-100 dark:border-zinc-800 last:border-0 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 transition"
+                                >
+                                    <div className="w-12 h-12 rounded-xl bg-[#84CC16]/10 flex items-center justify-center mr-6">
+                                        <span className="text-xl font-black text-[#84CC16]">{v.letter}</span>
+                                    </div>
+
+                                    <div>
+                                        <h4 className="font-bold text-zinc-900 dark:text-white mb-1">
+                                            {v.title}
+                                        </h4>
+                                        <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">
+                                            {v.desc}
+                                        </p>
+                                    </div>
+                                </div>
+                            ))}
+                        </motion.div>
+
+                        {/* NEST */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6, delay: 0.1 }}
+                            className="bg-white dark:bg-zinc-900 rounded-3xl shadow-xl border border-zinc-200 dark:border-zinc-800 overflow-hidden"
+                        >
+                            <div className="p-8 border-b border-zinc-200 dark:border-zinc-800">
+                                <h3 className="text-sm font-bold uppercase tracking-widest text-[#84CC16]">
+                                    Our Ecosystem — NEST
+                                </h3>
+                            </div>
+
+                            {nestValues.map((v, i) => (
+                                <div
+                                    key={i}
+                                    className="group flex items-start p-6 border-b border-zinc-100 dark:border-zinc-800 last:border-0 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 transition"
+                                >
+                                    <div className="w-12 h-12 rounded-xl bg-[#84CC16]/10 flex items-center justify-center mr-6">
+                                        <span className="text-xl font-black text-[#84CC16]">{v.letter}</span>
+                                    </div>
+
+                                    <div>
+                                        <h4 className="font-bold text-zinc-900 dark:text-white mb-1">
+                                            {v.title}
+                                        </h4>
+                                        <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">
+                                            {v.desc}
+                                        </p>
+                                    </div>
+                                </div>
+                            ))}
+                        </motion.div>
+
+                    </div>
+                    {/* right — Carousel */}
+                    <motion.div
+                        initial={{ opacity: 0, x: -40 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6 }}
+                        className="lg:sticky lg:top-28"
+                    >
+                        <div className="bg-white dark:bg-zinc-900 rounded-3xl shadow-xl border border-zinc-200 dark:border-zinc-800 p-6">
+                            <ImageCarousel images={images} />
+                        </div>
+                    </motion.div>
+
+                </div>
+            </div>
+        </section>
     );
 };
 
