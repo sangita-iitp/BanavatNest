@@ -13,7 +13,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import FluidCursor from "../components/FluidCursor";
 import DomainCarousel from "../components/DomainCarousel";
 import InfiniteUpdateBar from "../components/InfiniteUpdateBar";
-/* import PartnersFeedback from "../components/PartnersFeedback";*/
+import PartnersFeedback from "../components/PartnersFeedback";
 import image_agriculture from "../assets/homepage/agriculture.png";
 import image_ai from "../assets/homepage/Ai.png";
 import image_cyber from "../assets/homepage/cyberSecure.png";
