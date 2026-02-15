@@ -159,7 +159,7 @@ const Home = () => {
       </section>
 
       {/* Partners & Feedback Section */}
-     /* <PartnersFeedback />*/
+      <PartnersFeedback />
 
 
       {/* Mission & Vision Section - Fixed for Light Mode */}
