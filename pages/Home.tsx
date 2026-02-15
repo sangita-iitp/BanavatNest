@@ -60,13 +60,13 @@ const Home = () => {
 
   const updates = [
     {
-      title: "🏆 Upcoming Hackathon ",
-      route: "/news/hackathon-climate-change",
+      title: "We are Live Now ",
+      /*route: "/news/hackathon-climate-change",*/
     },
-    {
+   /* {
       title: "🤝 Partnership Announcement:",
       route: "/partnerships/techgiant",
-    },
+    },*/
   ];
 
   return (
