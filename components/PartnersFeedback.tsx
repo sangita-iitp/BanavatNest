@@ -14,10 +14,10 @@ const PartnersFeedback = () => {
     return (
         <section className="py-24 bg-white dark:bg-[#09090b]">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start"> 
 
                     {/* Left Column: Our Clients */}
-                    <div className="space-y-8">
+                      <div className="space-y-8">
                         <div>
                             <h2 className="text-4xl font-black text-zinc-900 dark:text-white tracking-tighter mb-4">
                                 Our Clients
@@ -41,10 +41,10 @@ const PartnersFeedback = () => {
                                 </div>
                             ))}
                         </div>
-                    </div>
+                    </div> 
 
                     {/* Right Column: Simple Feedback Form */}
-                    <div className="bg-zinc-50 dark:bg-zinc-900/50 p-8 rounded-2xl border border-zinc-100 dark:border-zinc-800">
+                      <div className="bg-zinc-50 dark:bg-zinc-900/50 p-8 rounded-2xl border border-zinc-100 dark:border-zinc-800">
                         <div className="mb-6">
                             <h3 className="text-2xl font-bold text-zinc-900 dark:text-white mb-2">Feedback</h3>
                             <p className="text-zinc-500 dark:text-zinc-400 text-sm">We'd love to hear from you.</p>
