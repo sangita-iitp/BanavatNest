@@ -34,7 +34,7 @@ const Contact = () => {
                        </div>
                        <div>
                           <p className="text-[10px] font-black text-gray-400 dark:text-zinc-400 uppercase tracking-[0.2em] mb-1">Email</p>
-                          <p className="text-lg font-bold text-zinc-900 dark:text-zinc-100">banavatnest@gmail.com</p>
+                          <p className="text-lg font-bold text-zinc-900 dark:text-zinc-100">info@banavatnest.com</p>
                        </div>
                     </div>
                     <div className="flex items-start gap-6 group">
