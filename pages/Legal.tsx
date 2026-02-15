@@ -69,7 +69,7 @@ export const PrivacyPolicyPage = () => (
     <h3>7. Contact</h3>
     <p>
       For queries regarding this Privacy Policy, please contact:<br />
-      Email: <a href="mailto:banavatnest@gmail.com" className="text-[#84CC16]">banavatnest@gmail.com</a>
+      Email: <a href="mailto:info@banavatnest.com" className="text-[#84CC16]">info@banavatnest.com</a>
     </p>
   </LegalLayout>
 );

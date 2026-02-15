@@ -17,8 +17,10 @@ interface DomainCarouselProps {
 
 const DomainCard: React.FC<{ item: DomainItem }> = ({ item }) => {
     return (
+        // style to make 16:9
+        // className=" relative w-full max-w-[900px] aspect-video rounded-[2.5rem] overflow-hidden group shadow-xl mx-auto"
         <div
-            className=" relative w-full max-w-[380px] h-[60vh] max-h-[650px] min-h-[480px] rounded-[2.5rem] overflow-hidden group shadow-xl mx-auto"
+            className=" relative w-full max-w-[600px] h-[60vh] max-h-[650px] min-h-[480px] rounded-[2.5rem] overflow-hidden group shadow-xl mx-auto"
         >
             {/* Background Image */}
             <div

@@ -14,10 +14,10 @@ import FluidCursor from "../components/FluidCursor";
 import DomainCarousel from "../components/DomainCarousel";
 import InfiniteUpdateBar from "../components/InfiniteUpdateBar";
 import PartnersFeedback from "../components/PartnersFeedback";
-import image_agriculture from "../assets/homepage/agriculture.png";
-import image_ai from "../assets/homepage/Ai.png";
-import image_cyber from "../assets/homepage/cyberSecure.png";
-import image_smart from "../assets/homepage/smart.png";
+import image_agriculture from "../assets/homepage/agriculture.jpg";
+import image_ai from "../assets/homepage/Ai.jpg";
+import image_cyber from "../assets/homepage/cyberSecure.jpg";
+import image_smart from "../assets/homepage/smart.jpg";
 
 const Home = () => {
   const { scrollY } = useScroll();
@@ -59,14 +59,14 @@ const Home = () => {
   ];
 
   const updates = [
+    // {
+    //   title: "🏆 Upcoming Hackathon ",
+    //   route: "/news/hackathon-climate-change",
+    // },
     {
-      title: "We are Live Now ",
-      /*route: "/news/hackathon-climate-change",*/
+      title: "BanavatNest Official Website Goes Live",
+      route: "/",
     },
-   /* {
-      title: "🤝 Partnership Announcement:",
-      route: "/partnerships/techgiant",
-    },*/
   ];
 
   return (
@@ -79,7 +79,7 @@ const Home = () => {
       </div>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden grid-bg pt-12 pb-24 md:pt-12 md:pb-40 dark:bg-[#09090b]">
+      <section className="relative overflow-hidden grid-bg pt-12 pb-24 md:pt-12 md:pb-10 dark:bg-[#09090b]">
         <div className="hidden dark:block">
           <motion.div
             animate={{ scale: [1, 1.05, 1], opacity: [0.08, 0.12, 0.08] }}
@@ -158,8 +158,14 @@ const Home = () => {
         </div>
       </section>
 
+
+
+
       {/* Partners & Feedback Section */}
-      <PartnersFeedback />
+      {/* <PartnersFeedback /> */}
+
+
+
 
 
       {/* Mission & Vision Section - Fixed for Light Mode */}

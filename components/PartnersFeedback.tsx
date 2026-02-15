@@ -56,7 +56,7 @@ const PartnersFeedback = () => {
                                 <input
                                     type="text"
                                     id="name"
-                                    className="w-full px-4 py-3 rounded-lg bg-white dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 focus:outline-none focus:border-[#84CC16] transition-colors"
+                                    className="w-full px-4 py-3 rounded-lg bg-white dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 focus:outline-none dark:text-white focus:border-[#84CC16] transition-colors"
                                     placeholder="Your Name"
                                 />
                             </div>
@@ -65,8 +65,17 @@ const PartnersFeedback = () => {
                                 <input
                                     type="email"
                                     id="email"
-                                    className="w-full px-4 py-3 rounded-lg bg-white dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 focus:outline-none focus:border-[#84CC16] transition-colors"
+                                    className="w-full px-4 py-3 rounded-lg bg-white dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 focus:outline-none dark:text-white  focus:border-[#84CC16] transition-colors"
                                     placeholder="your@email.com"
+                                />
+                            </div>
+                            <div>
+                                <label htmlFor="subject" className="block text-sm font-bold text-zinc-700 dark:text-zinc-300 mb-1">Subject </label>
+                                <input
+                                    type="text"
+                                    id="subject"
+                                    className="w-full px-4 py-3 rounded-lg bg-white dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 focus:outline-none dark:text-white  focus:border-[#84CC16] transition-colors"
+                                    placeholder="your subject"
                                 />
                             </div>
                             <div>
@@ -74,7 +83,7 @@ const PartnersFeedback = () => {
                                 <textarea
                                     id="message"
                                     rows={4}
-                                    className="w-full px-4 py-3 rounded-lg bg-white dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 focus:outline-none focus:border-[#84CC16] transition-colors resize-none"
+                                    className="w-full px-4 py-3 rounded-lg bg-white dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 focus:outline-none dark:text-white  focus:border-[#84CC16] transition-colors resize-none"
                                     placeholder="Your thoughts..."
                                 />
                             </div>

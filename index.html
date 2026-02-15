@@ -1,85 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BanavatNest | Research & Innovation</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        darkMode: 'class',
-        theme: {
-          extend: {
-            colors: {
-              lime: {
-                400: '#84CC16',
-                500: '#65A30D',
-              }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BanavatNest </title>
+  <link rel="icon" href="/logo.jpg" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            lime: {
+              400: '#84CC16',
+              500: '#65A30D',
             }
           }
         }
       }
-    </script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            overflow-x: hidden;
-            scroll-behavior: smooth;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-        .grid-bg {
-            position: relative;
-            z-index: 0;
-        }
-        .grid-bg::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            /* Increased dot size from 1px to 1.5px and adjusted colors for better visibility */
-            background-image: radial-gradient(var(--grid-color, #d1d5db) 1.5px, transparent 1.5px);
-            background-size: 40px 40px;
-            z-index: -10;
-            pointer-events: none;
-        }
-        .dark .grid-bg::before {
-            /* Lightened the dots for dark mode to be more visible (Zinc-800 equivalent) */
-            --grid-color: #27272a;
-        }
-        ::selection {
-            background-color: #bef264;
-            color: #18181b;
-        }
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: transparent;
-        }
-        .dark ::-webkit-scrollbar-track {
-            background: #09090b;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #d4d4d8;
-            border-radius: 10px;
-        }
-        .dark ::-webkit-scrollbar-thumb {
-            background: #3f3f46;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #a1a1aa;
-        }
-        
-        /* Dark Mode Glowing Utility */
-        .glow-hover {
-            transition: all 0.3s ease;
-        }
-        .dark .glow-hover:hover {
-            box-shadow: 0 0 40px rgba(132, 204, 22, 0.12);
-            border-color: rgba(132, 204, 22, 0.3);
-        }
-    </style>
-<script type="importmap">
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .grid-bg {
+      position: relative;
+      z-index: 0;
+    }
+
+    .grid-bg::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      /* Increased dot size from 1px to 1.5px and adjusted colors for better visibility */
+      background-image: radial-gradient(var(--grid-color, #d1d5db) 1.5px, transparent 1.5px);
+      background-size: 40px 40px;
+      z-index: -10;
+      pointer-events: none;
+    }
+
+    .dark .grid-bg::before {
+      /* Lightened the dots for dark mode to be more visible (Zinc-800 equivalent) */
+      --grid-color: #27272a;
+    }
+
+    ::selection {
+      background-color: #bef264;
+      color: #18181b;
+    }
+
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .dark ::-webkit-scrollbar-track {
+      background: #09090b;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #d4d4d8;
+      border-radius: 10px;
+    }
+
+    .dark ::-webkit-scrollbar-thumb {
+      background: #3f3f46;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #a1a1aa;
+    }
+
+    /* Dark Mode Glowing Utility */
+    .glow-hover {
+      transition: all 0.3s ease;
+    }
+
+    .dark .glow-hover:hover {
+      box-shadow: 0 0 40px rgba(132, 204, 22, 0.12);
+      border-color: rgba(132, 204, 22, 0.3);
+    }
+  </style>
+  <script type="importmap">
 {
   "imports": {
     "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
@@ -91,10 +105,12 @@
   }
 }
 </script>
-<link rel="stylesheet" href="/index.css">
+  <link rel="stylesheet" href="/index.css">
 </head>
+
 <body class="bg-zinc-50 dark:bg-[#09090b]">
-    <div id="root"></div>
-<script type="module" src="/index.tsx"></script>
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
 </body>
+
 </html>

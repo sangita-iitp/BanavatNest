@@ -3,21 +3,14 @@ import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Linkedin, Facebook, Instagram, Twitter } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-const Logo = () => (
-    <div className="flex font-extrabold text-2xl tracking-tighter items-center group cursor-pointer">
-        <div className="flex items-baseline">
-            <span className="text-[#84CC16]">Banavat</span>
-            <span className="text-[#5D3A1A] dark:text-zinc-100 transition-colors">Nest</span>
-        </div>
-    </div>
-);
+import Logo from '../Logo';
 
 const Footer = () => {
     const socialLinks = [
-        { Icon: Linkedin, href: "#", label: "LinkedIn" },
-        { Icon: Facebook, href: "#", label: "Facebook" },
-        { Icon: Instagram, href: "#", label: "Instagram" },
-        { Icon: Twitter, href: "#", label: "X (Twitter)" },
+        { Icon: Linkedin, href: "https://www.linkedin.com/company/banavatnest-pvt-ltd/", label: "LinkedIn" },
+        { Icon: Facebook, href: "https://www.facebook.com/profile.php?id=61587883936129", label: "Facebook" },
+        // { Icon: Instagram, href: "#", label: "Instagram" },
+        // { Icon: Twitter, href: "#", label: "X (Twitter)" },
     ];
 
     return (
@@ -35,7 +28,7 @@ const Footer = () => {
                         <div className="mt-8 flex space-x-3">
                             {socialLinks.map(({ Icon, href }, i) => (
                                 <motion.div key={i} whileHover={{ y: -5, scale: 1.1 }}>
-                                    <a href={href} className="block p-2.5 bg-gray-50 dark:bg-zinc-800/50 rounded-xl hover:bg-lime-50 dark:hover:bg-lime-900/10 text-gray-400 dark:text-zinc-500 hover:text-[#84CC16] transition-all">
+                                    <a href={href} target="_blank" className="block p-2.5 bg-gray-50 dark:bg-zinc-800/50 rounded-xl hover:bg-lime-50 dark:hover:bg-lime-900/10 text-gray-400 dark:text-zinc-500 hover:text-[#84CC16] transition-all">
                                         <Icon className="w-5 h-5" />
                                     </a>
                                 </motion.div>
@@ -62,11 +55,18 @@ const Footer = () => {
                     </div>
 
                     <div>
-                        <h4 className="text-zinc-900 dark:text-zinc-100 font-bold mb-8 text-lg">Contact & Address</h4>
+                        <h4 className="text-zinc-900 dark:text-zinc-100 font-bold mb-8 text-lg">Contact </h4>
                         <ul className="space-y-4 text-sm text-gray-500 dark:text-zinc-400 font-bold">
-                            <li className="flex items-start"><Mail className="w-5 h-5 mr-3 text-[#84CC16] shrink-0" /> banavatnest@gmail.com</li>
+                            <li className="flex items-start"><Mail className="w-5 h-5 mr-3 text-[#84CC16] shrink-0" /> <a
+                                href="https://mail.google.com/mail/?view=cm&fs=1&to=info@banavatnest.com&su=Inquiry from Website&body=Hi BanavatNest Team,"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="hover:underline"
+                            >
+                                info@banavatnest.com
+                            </a></li>
                             <li className="flex items-start"><Phone className="w-5 h-5 mr-3 text-[#84CC16] shrink-0" /> +91 99340 44777<br />+91 80023 96506</li>
-                            <li className="flex items-start"><MapPin className="w-5 h-5 mr-3 text-[#84CC16] shrink-0" />
+                            {/* <li className="flex items-start"><MapPin className="w-5 h-5 mr-3 text-[#84CC16] shrink-0" />
                                 <span>
                                     Registered Address:<br />
                                     C/O Utsab Roy,<br />
@@ -74,13 +74,13 @@ const Footer = () => {
                                     Sutahata, East Midnapore,<br />
                                     West Bengal, India – 721645
                                 </span>
-                            </li>
+                            </li> */}
                         </ul>
                     </div>
                 </div>
 
                 <div className="border-t border-gray-100 dark:border-zinc-900 pt-10 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400 dark:text-zinc-500 font-medium">
-                    <p>© 2025 BanavatNest Private Limited. All rights reserved.</p>
+                    <p>© {new Date().getFullYear() + " "}BanavatNest Private Limited. All rights reserved.</p>
                 </div>
             </div>
         </footer>

@@ -1,6 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { UserCircle2, CircleDot } from 'lucide-react';
+import { CircleDot } from 'lucide-react';
+
+import sukhdevImg from '../../assets/Director/Sukhdev.jpeg';
+import sangitaImg from '../../assets/Director/Sangita.jpeg';
 
 const Board = () => {
     return (
@@ -25,8 +28,8 @@ const Board = () => {
                         whileHover={{ y: -10 }}
                         className="bg-white dark:bg-zinc-900/50 rounded-[4rem] p-12 border border-zinc-100 dark:border-zinc-800 relative text-left transition-all duration-300 shadow-xl hover:shadow-2xl dark:hover:shadow-[0_0_40px_rgba(132,204,22,0.15)] dark:hover:border-lime-500/30"
                     >
-                        <div className="w-20 h-20 bg-[#84CC16] rounded-3xl flex items-center justify-center shadow-lg mb-8">
-                            <UserCircle2 className="w-12 h-12 text-zinc-900" />
+                        <div className="w-48 h-48 rounded-3xl overflow-hidden shadow-lg mb-8 border-4 border-white dark:border-zinc-800 mx-auto md:mx-0">
+                            <img src={sukhdevImg} alt="Dr. Sukhdev Singh" className="w-full h-full object-cover object-top" />
                         </div>
                         <h3 className="text-3xl font-black text-zinc-900 dark:text-zinc-100 mb-2">Dr. Sukhdev Singh</h3>
                         <p className="text-[#84CC16] font-bold text-lg mb-8 uppercase tracking-widest">Director | PhD (IIT Patna)</p>
@@ -45,8 +48,8 @@ const Board = () => {
                         whileHover={{ y: -10 }}
                         className="bg-white dark:bg-zinc-900/50 rounded-[4rem] p-12 border border-zinc-100 dark:border-zinc-800 relative text-left transition-all duration-300 shadow-xl hover:shadow-2xl dark:hover:shadow-[0_0_40px_rgba(132,204,22,0.15)] dark:hover:border-lime-500/30 overflow-hidden"
                     >
-                        <div className="w-20 h-20 bg-[#84CC16]/20 dark:bg-white/10 rounded-3xl flex items-center justify-center shadow-lg mb-8">
-                            <UserCircle2 className="w-12 h-12 text-[#84CC16]" />
+                        <div className="w-48 h-48 rounded-3xl overflow-hidden shadow-lg mb-8 border-4 border-white dark:border-zinc-800 mx-auto md:mx-0">
+                            <img src={sangitaImg} alt="Dr. Sangita Roy" className="w-full h-full object-cover object-top" />
                         </div>
                         <h3 className="text-3xl font-black mb-2 text-zinc-900 dark:text-zinc-100">Dr. Sangita Roy</h3>
                         <p className="text-[#84CC16] font-bold text-lg mb-8 uppercase tracking-widest">Director | PhD (IIT Patna)</p>
