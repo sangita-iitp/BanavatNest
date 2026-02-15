@@ -1,79 +1,152 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Microscope, Code2, Users2, Zap } from 'lucide-react';
+import ImageCarousel from '../../components/ImageCarousel';
 
-const FocusCard: React.FC<{ area: any; idx: number }> = ({ area, idx }) => (
-    <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        whileHover={{ y: -8 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.25, delay: idx * 0.05 }}
-        className={`bg-white dark:bg-zinc-900/50 p-10 rounded-[2.5rem] border border-gray-100 dark:border-zinc-800 transition-all duration-200 group flex flex-col items-start h-full text-left shadow-sm hover:shadow-xl`}
-    >
-        <div className={`w-16 h-16 ${area.bgColor} dark:bg-zinc-800 rounded-2xl flex items-center justify-center mb-6 shadow-inner`}>
-            {area.icon}
-        </div>
-        <h3 className="text-2xl font-black text-zinc-900 dark:text-zinc-100 mb-4 tracking-tighter">{area.title}</h3>
-        <p className="text-base text-gray-500 dark:text-zinc-400 font-medium leading-relaxed">{area.desc}</p>
-    </motion.div>
-);
+import img1 from '../../assets/homepage/Ai.png';
+import img2 from '../../assets/homepage/agriculture.png';
+import img3 from '../../assets/homepage/cyberSecure.png';
+import img4 from '../../assets/homepage/smart.png';
+
+export interface FocusAreaItem {
+    title: string;
+    desc: string;
+    icon: React.ReactNode;
+    color: string;
+    accent: string;
+    border: string;
+    images: string[];
+}
+
+const FOCUS_AREAS: FocusAreaItem[] = [
+    {
+        title: 'Research & Development',
+        desc: 'Systematic investigation and analytical modeling to solve real-world problems with scalable solutions.',
+        icon: <Microscope className="w-6 h-6" />,
+        color: 'bg-blue-500',
+        accent: 'text-blue-500',
+        border: 'hover:border-blue-500/50',
+        images: [img1, img2]
+    },
+    {
+        title: 'Product Prototyping',
+        desc: 'Integrating design and engineering to translate ideas into functional, industrial-grade prototypes.',
+        icon: <Code2 className="w-6 h-6" />,
+        color: 'bg-[#84CC16]',
+        accent: 'text-[#84CC16]',
+        border: 'hover:border-[#84CC16]/50',
+        images: [img2, img3]
+    },
+    {
+        title: 'Academia Collaboration',
+        desc: 'Enabling student-driven projects and faculty-led innovation through active industry partnering.',
+        icon: <Users2 className="w-6 h-6" />,
+        color: 'bg-purple-500',
+        accent: 'text-purple-500',
+        border: 'hover:border-purple-500/50',
+        images: [img3, img4]
+    },
+    {
+        title: 'Tech Transfer',
+        desc: 'Transforming research into deployable technologies through IP development and commercialization.',
+        icon: <Zap className="w-6 h-6" />,
+        color: 'bg-amber-500',
+        accent: 'text-amber-500',
+        border: 'hover:border-amber-500/50',
+        images: [img4, img1]
+    }
+];
 
 const FocusAreas = () => {
-    const focusAreas = [
-        {
-            title: 'Research & Development',
-            desc: 'Addressing real-world problems through systematic investigation, analytical modeling, and experimental validation in pursuit of scalable solutions.',
-            icon: <Microscope className="w-7 h-7 text-blue-500" />,
-            bgColor: 'bg-blue-50'
-        },
-        {
-            title: 'Product Prototyping',
-            desc: 'Integrating design, engineering, and testing to translate research ideas into functional, industrial-grade prototypes tailored for deployment.',
-            icon: <Code2 className="w-7 h-7 text-[#84CC16]" />,
-            bgColor: 'bg-lime-50'
-        },
-        {
-            title: 'Academia Collaboration',
-            desc: 'Enabling student-driven projects and faculty-led innovation. Ensuring knowledge transfer and industry-relevant outcomes through active partnering.',
-            icon: <Users2 className="w-7 h-7 text-purple-500" />,
-            bgColor: 'bg-purple-50'
-        },
-        {
-            title: 'Tech Transfer',
-            desc: 'Transforming research outputs into deployable technologies through IP development, proof-of-concept validation, and commercialization support.',
-            icon: <Zap className="w-7 h-7 text-amber-500" />,
-            bgColor: 'bg-amber-50'
-        }
-    ];
-
     return (
-        <div className="min-h-screen bg-zinc-50 dark:bg-[#09090b] transition-colors pb-24">
-            <header className="bg-white dark:bg-zinc-900/20 pt-32 pb-20 border-b border-gray-100 dark:border-zinc-800 relative overflow-hidden mb-12">
-                <div className="absolute top-0 right-0 w-80 h-80 bg-[#84CC16]/5 blur-[150px] rounded-full pointer-events-none" />
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-left">
-                    <motion.h1
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        className="text-6xl md:text-8xl font-black text-zinc-900 dark:text-zinc-100 mb-8 tracking-tighter"
-                    >
-                        Focus <span className="text-[#84CC16]">Areas</span>
-                    </motion.h1>
-                    <p className="text-xl md:text-2xl text-gray-400 dark:text-zinc-400 font-medium max-w-3xl leading-relaxed">
-                        From experimental development to market-ready prototypes, providing the technical foundation for innovation.
-                    </p>
-                </div>
-            </header>
+        <section className="relative bg-zinc-50 dark:bg-[#09090b] py-24 lg:py-32 overflow-hidden transition-colors duration-500">
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {focusAreas.map((area, idx) => (
-                        <FocusCard key={idx} area={area} idx={idx} />
+            {/* Subtle Grid Background */}
+            <div className="absolute inset-0 pointer-events-none 
+                bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)]
+                bg-[size:24px_24px]
+                [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"
+            />
+
+            <div className="relative z-10 max-w-7xl mx-auto px-6">
+
+                {/* Header */}
+                <div className="text-left mb-16">
+                    <h1 className="text-4xl md:text-6xl font-black text-zinc-900 dark:text-zinc-100 mb-6 tracking-tight">
+                        Our Focus  <span className="text-[#84CC16]">Areas</span>
+                    </h1>
+                    <p className="text-xl text-zinc-500 dark:text-zinc-400 leading-relaxed max-w-2xl">
+                        Bridging the gap between theoretical research and practical application.</p>
+                </div>
+
+                {/* Bento Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+                    {FOCUS_AREAS.map((area, idx) => (
+                        <FocusAreaCard key={idx} area={area} index={idx} />
                     ))}
                 </div>
+
             </div>
-        </div>
+        </section>
     );
 };
 
-export default FocusAreas;
+interface FocusAreaCardProps {
+    area: FocusAreaItem;
+    index: number;
+}
+
+const FocusAreaCard: React.FC<FocusAreaCardProps> = ({ area, index }) => {
+    return (
+        <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            className={`
+                group relative flex flex-col overflow-hidden rounded-[2.5rem]
+                bg-white dark:bg-zinc-900 
+                border border-zinc-200 dark:border-zinc-800
+                ${area.border} transition-colors duration-300
+                shadow-sm hover:shadow-2xl
+            `}
+        >
+            {/* Content Top */}
+            <div className="p-8 md:p-10 z-10">
+                <div className={`
+                    w-12 h-12 rounded-2xl flex items-center justify-center mb-6
+                    bg-zinc-50 dark:bg-zinc-800 border border-zinc-100 dark:border-zinc-700
+                    group-hover:scale-110 transition-transform duration-300
+                `}>
+                    <div className={`${area.accent}`}>
+                        {area.icon}
+                    </div>
+                </div>
+
+                <h3 className="text-2xl md:text-3xl font-bold text-zinc-900 dark:text-zinc-100 mb-4">
+                    {area.title}
+                </h3>
+
+                <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed text-lg">
+                    {area.desc}
+                </p>
+            </div>
+
+            {/* Visual Bottom */}
+            <div className="mt-auto px-6 pb-6 lg:px-8 lg:pb-8">
+                <div className="relative rounded-2xl overflow-hidden shadow-inner border border-zinc-100 dark:border-zinc-800/50 group-hover:translate-y-[-4px] transition-transform duration-500">
+                    {/* Overlay gradient to blend bottom of image if needed, or just let carousel shine */}
+                    <ImageCarousel images={area.images} />
+                </div>
+            </div>
+
+            {/* Decorative Gradient Blob on Hover */}
+            <div className={`
+                absolute top-0 right-0 -mt-20 -mr-20 w-64 h-64 
+                bg-gradient-to-br ${area.color} to-transparent opacity-0 
+                group-hover:opacity-10 blur-[80px] transition-opacity duration-500 pointer-events-none
+            `} />
+
+        </motion.div>
+    );
+};
