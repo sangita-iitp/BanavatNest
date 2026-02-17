@@ -1,6 +1,6 @@
 import React, { useEffect, Suspense } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
-import { HashRouter as Router, Routes, Route, useLocation, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import Layout from './components/Layout';
 import LoadingSpinner from './components/LoadingSpinner';
