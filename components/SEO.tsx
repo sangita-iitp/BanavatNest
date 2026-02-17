@@ -14,7 +14,7 @@ const SEO: React.FC<SEOProps> = ({
     title = "BanavatNest | Research-Led Innovation Ecosystem",
     description = "BanavatNest transforms curiosity into practical, scalable, and impactful solutions through systematic investigation in AI, Cybersecurity, Smart Systems, and Agriculture.",
     keywords = "Research, Innovation, AI, ML, Cybersecurity, Agriculture, Smart Systems, BanavatNest",
-    image = "/assets/logo.png", // Assuming a default logo path, adjust if needed
+    image = "/logo.jpg", // Using logo from public folder
     url = "https://banavatnest.com",
     type = "website",
 }) => {
@@ -27,7 +27,7 @@ const SEO: React.FC<SEOProps> = ({
         "@type": "Organization",
         "name": "BanavatNest",
         "url": "https://banavatnest.com",
-        "logo": "https://banavatnest.com/logo.png",
+        "logo": "https://banavatnest.com/logo.jpg",
         "sameAs": [
             "https://www.linkedin.com/company/banavatnest",
             "https://twitter.com/banavatnest"
