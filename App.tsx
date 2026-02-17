@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { HelmetProvider } from 'react-helmet-async';
 import { HashRouter as Router, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import Layout from './components/Layout';
@@ -87,12 +88,14 @@ const AnimatedRoutes = () => {
 
 function App() {
   return (
-    <Router>
-      <ScrollToTop />
-      <Layout>
-        <AnimatedRoutes />
-      </Layout>
-    </Router>
+    <HelmetProvider>
+      <Router>
+        <ScrollToTop />
+        <Layout>
+          <AnimatedRoutes />
+        </Layout>
+      </Router>
+    </HelmetProvider>
   );
 }
 

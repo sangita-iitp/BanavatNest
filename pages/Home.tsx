@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
+import SEO from "../components/SEO";
 import FluidCursor from "../components/FluidCursor";
 import DomainCarousel from "../components/DomainCarousel";
 import InfiniteUpdateBar from "../components/InfiniteUpdateBar";
@@ -71,6 +72,10 @@ const Home = () => {
 
   return (
     <div className="relative pt-20"> {/* Added pt-20 to account for fixed navbar, ensuring bar is visible below it */}
+      <SEO
+        title="Home"
+        description="BanavatNest transforms curiosity into practical, scalable, and impactful solutions through systematic investigation in AI, Cybersecurity, Smart Systems, and Agriculture."
+      />
       <FluidCursor />
 
       {/* Infinite Update Bar positioned below fixed navbar */}
